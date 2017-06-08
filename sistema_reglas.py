@@ -29,16 +29,19 @@ outputs = [
 ]
 
 message_format = 'SI {} es {}, {} es {} e {} es {} ENTONCES {} es '
-messages = []
+rules = []
+
+print('\n SISTEMA DE REGLAS BASE (LISTO PARA LLENAR)\n')
 
 for humedad in inputs[0][1]:
     for grano_partido in inputs[1][1]:
         for impureza in inputs[2][1]:
-            message = message_format.format(
+            rule = message_format.format(
                 inputs[0][0], humedad, inputs[1][0],
                 grano_partido, inputs[2][0], impureza,
                 outputs[0][0]
             )
-            messages.append(message)
+            rules.append(rule)
+            print(rule)
 
-print('%s mensajes' % len(messages))
+print('\n%s reglas en el sistema.' % len(rules))
