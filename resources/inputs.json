@@ -1,36 +1,42 @@
 {
 	"inputs": [
 		{
-			"nombre": "Humedad",
+			"nombre": "Tipo de via",
 			"universo": {
 				"etiquetas": [
-					{ "nombre": "Muy baja", "minimo": 0, "maximo": 20 },
-					{ "nombre": "Baja", "minimo": 21, "maximo": 40 },
-					{ "nombre": "Media", "minimo": 41, "maximo": 60 },
-					{ "nombre": "Alta", "minimo": 61, "maximo": 80 },
-					{ "nombre": "Muy alta", "minimo": 81, "maximo": 100 }
+					{ "nombre": "Angosta", "minimo": 0, "maximo": 33.3 },
+					{ "nombre": "Media", "minimo": 33.4, "maximo": 66.6 },
+					{ "nombre": "Ancha", "minimo": 66.7, "maximo": 100 }
 				]
 			}
 		},
 		{
-			"nombre": "Gano partido",
+			"nombre": "Trafico",
 			"universo": {
 				"etiquetas": [
-					{ "nombre": "Poco partido", "minimo": 0, "maximo": 33.3 },
+					{ "nombre": "Poco", "minimo": 0, "maximo": 33.3 },
 					{ "nombre": "Medio", "minimo": 33.4, "maximo": 66.6 },
-					{ "nombre": "Muy partido", "minimo": 66.7, "maximo": 100 }
+					{ "nombre": "Alto", "minimo": 66.7, "maximo": 100 }
 				]
 			}
 		},
 		{
-			"nombre": "Impureza",
+			"nombre": "Estado de la via",
 			"universo": {
 				"etiquetas": [
-					{ "nombre": "Muy baja", "minimo": 0, "maximo": 20 },
-					{ "nombre": "Baja", "minimo": 21, "maximo": 40 },
-					{ "nombre": "Media", "minimo": 41, "maximo": 60 },
-					{ "nombre": "Alta", "minimo": 61, "maximo": 80 },
-					{ "nombre": "Muy alta", "minimo": 81, "maximo": 100 }
+					{ "nombre": "Mala", "minimo": 0, "maximo": 33.3 },
+					{ "nombre": "Regular", "minimo": 33.4, "maximo": 66.6 },
+					{ "nombre": "Buena", "minimo": 66.7, "maximo": 100 }
+				]
+			}
+		},
+		{
+			"nombre": "Velocidad",
+			"universo": {
+				"etiquetas": [
+					{ "nombre": "Mala", "minimo": 0, "maximo": 33.3 },
+					{ "nombre": "Regular", "minimo": 33.4, "maximo": 66.6 },
+					{ "nombre": "Buena", "minimo": 66.7, "maximo": 100 }
 				]
 			}
 		}
