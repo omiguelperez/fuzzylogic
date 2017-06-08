@@ -1,0 +1,38 @@
+{
+	"inputs": [
+		{
+			"nombre": "Humedad",
+			"universo": {
+				"etiquetas": [
+					{ "nombre": "Muy baja", "minimo": 0, "maximo": 20 },
+					{ "nombre": "Baja", "minimo": 21, "maximo": 40 },
+					{ "nombre": "Media", "minimo": 41, "maximo": 60 },
+					{ "nombre": "Alta", "minimo": 61, "maximo": 80 },
+					{ "nombre": "Muy alta", "minimo": 81, "maximo": 100 }
+				]
+			}
+		},
+		{
+			"nombre": "Gano partido",
+			"universo": {
+				"etiquetas": [
+					{ "nombre": "Poco partido", "minimo": 0, "maximo": 33.3 },
+					{ "nombre": "Medio", "minimo": 33.4, "maximo": 66.6 },
+					{ "nombre": "Muy partido", "minimo": 66.7, "maximo": 100 }
+				]
+			}
+		},
+		{
+			"nombre": "Impureza",
+			"universo": {
+				"etiquetas": [
+					{ "nombre": "Muy baja", "minimo": 0, "maximo": 20 },
+					{ "nombre": "Baja", "minimo": 21, "maximo": 40 },
+					{ "nombre": "Media", "minimo": 41, "maximo": 60 },
+					{ "nombre": "Alta", "minimo": 61, "maximo": 80 },
+					{ "nombre": "Muy alta", "minimo": 81, "maximo": 100 }
+				]
+			}
+		}
+	]
+}

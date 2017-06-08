@@ -1,47 +1,39 @@
-inputs = [
-    ['Humedad', [
-        'Muy baja',
-        'Baja',
-        'Media',
-        'Alta',
-        'Muy Alta'
-    ]],
-    ['Grano partido', [
-        'Poco partido',
-        'Medio',
-        'Muy partido'
-    ]],
-    ['Impureza', [
-        'Muy baja',
-        'Baja',
-        'Media',
-        'Alta',
-        'Muy alta'
-    ]]
-]
+import json
 
-outputs = [
-    ['Calidad', [
-        'Baja',
-        'Media',
-        'Alta'
-    ]]
-]
+inputs = json.loads(open('resources/inputs.json').read())['inputs']
+outputs = json.loads(open('resources/outputs.json').read())['outputs']
+
+
+def get_quality(quality_value, output):
+    """Este metodo en teoria debe generar una etiqueda linguistica de salida."""
+    tags = output['universo']['etiquetas']
+    for tag in tags:
+        if quality_value >= tag['minimo'] and quality_value < tag['maximo'] and tag['maximo'] != 100:
+            return tag['nombre']
+    return tags[len(tags) - 1]['nombre']
+
 
 message_format = 'SI {} es {}, {} es {} e {} es {} ENTONCES {} es '
 rules = []
 
-print('\n SISTEMA DE REGLAS BASE (LISTO PARA LLENAR)\n')
 
-for humedad in inputs[0][1]:
-    for grano_partido in inputs[1][1]:
-        for impureza in inputs[2][1]:
-            rule = message_format.format(
-                inputs[0][0], humedad, inputs[1][0],
-                grano_partido, inputs[2][0], impureza,
-                outputs[0][0]
-            )
-            rules.append(rule)
-            print(rule)
+def generate_rules_system():
+    """Genera el sistema de reglas base del problema."""
+    print('\n SISTEMA DE REGLAS BASE (LISTO PARA LLENAR)\n')
+    for humedad in inputs[0]['universo']['etiquetas']:
+        for grano_partido in inputs[1]['universo']['etiquetas']:
+            for impureza in inputs[2]['universo']['etiquetas']:
+                rule = message_format.format(
+                    inputs[0]['nombre'], humedad['nombre'],
+                    inputs[1]['nombre'], grano_partido['nombre'],
+                    inputs[2]['nombre'], impureza['nombre'],
+                    outputs[0]['nombre']
+                )
+                rules.append(rule)
+                print(rule)
+    print('\n%s reglas en el sistema.' % len(rules))
 
-print('\n%s reglas en el sistema.' % len(rules))
+
+"""Iniciar programa principal si es main."""
+if __name__ == '__main__':
+    generate_rules_system()

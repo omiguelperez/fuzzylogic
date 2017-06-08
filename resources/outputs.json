@@ -1,0 +1,14 @@
+{
+	"outputs": [
+		{
+			"nombre": "Calidad",
+			"universo": {
+				"etiquetas": [
+					{ "nombre": "Baja", "minimo": 0, "maximo": 33.3 },
+					{ "nombre": "Media", "minimo": 33.4, "maximo": 66.6 },
+					{ "nombre": "Alta", "minimo": 66.7, "maximo": 100 }
+				]
+			}
+		}
+	]
+}
