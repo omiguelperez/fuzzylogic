@@ -22,16 +22,14 @@ def generate_rules_system():
                         inputs[2]['nombre'], estado['nombre'],
                         outputs[0]['nombre']
                     )
-                    rules.append(rule)
-                    print(rule)
-                    # input_rule = raw_input('{}: '.format(rule))
-                    # rules.append('{} {}'.format(rule, input_rule))
+                    input_rule = input('{}: '.format(rule))
+                    rules.append('{} {}'.format(rule, input_rule))
     print('\n%s reglas en el sistema.' % len(rules))
 
 
 def save_rules():
     """Guardar el sistema de reglas obtenido en el problema."""
-    response = raw_input('Desea guardar el sistema de reglas? S/N: ')
+    response = input('Desea guardar el sistema de reglas? S/N: ')
     if response == 'S':
         pickle.dump(rules, open('rules.db', 'wb'))
 
